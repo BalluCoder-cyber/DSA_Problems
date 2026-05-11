@@ -7,6 +7,7 @@ Input: n = 6
 Output: true
 Explanation: Divisors of 6 are 1, 2 and 3. Sum of divisors is 6.
 */
+import java.util.*;
 public class PerfectNumber {
     static boolean numberIsPerfect(int num){
         if(num==1) return true;
@@ -20,7 +21,10 @@ public class PerfectNumber {
         return false;
     }
     public static void main(String[] args) {
-        System.out.println(numberIsPerfect(6));
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter you number");
+        int num = s.nextInt();
+        System.out.println(numberIsPerfect(num));
 
     }
 }
