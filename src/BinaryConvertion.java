@@ -10,7 +10,7 @@ public class BinaryConvertion {
     }
 
     public static void main(String[] args) {
-        System.out.println(intTOBinary(2));
+        System.out.println(intTOBinary(3));
 
     }
 }
