@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class Closest_SumOf3 {
+    public static int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int close = nums[0]+nums[1]+nums[2];
+        for(int i =0; i<nums.length-2; i++){
+            int left = i+1; int right= nums.length-1;
+            while (left < right){
+                int sum = nums[i]+nums[left]+nums[right];
+                if(Math.abs(sum-target)< Math.abs(close-target)){
+                    close = sum;
+                }
+                if(left<right){
+                    left++;
+                }else{
+                    right--;
+                }
+            }
+        }
+        return close;
+    }
+    public static void main(String[] args) {
+        int[] arr = {-1,2,1,4};
+        System.out.println(threeSumClosest(arr,1));
+
+    }
+}
