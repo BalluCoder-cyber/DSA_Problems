@@ -1,0 +1,37 @@
+import java.util.Arrays;
+
+public class Next_permutation {
+    public static void nextPermutation(int[] nums) {
+        int i = nums.length-2;
+        while (i >= 0 && nums[i] >= nums[i+1]) {
+            i--;
+        }
+        if(i>=0){
+            int j = nums.length-1;
+            while ((nums[j]<=nums[i])){
+                j--;
+            }
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
+
+        int start = i+1;
+        int end = nums.length-1;
+        while (start < end){
+            int temp1 = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp1;
+
+            start++;
+            end--;
+        }
+        System.out.println(Arrays.toString(nums));
+
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,2,3};
+        nextPermutation(arr);
+
+    }
+}
