@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class MajorityElement {
     public static int majorityElement(int[] nums) {
         int n = nums.length / 2;
-        int maxCount = Integer.MIN_VALUE;
         Arrays.sort(nums);
 
         return nums[n+1];
