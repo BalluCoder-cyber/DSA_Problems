@@ -5,7 +5,7 @@ public class LeetCode1344 {
         double hourDisplacement =(double) minutes/2;
         double finalHour = hourDeg+hourDisplacement;
         double minDeg = (double) minutes*6;
-        double degDiff = Math.abs(finalHour- minDeg);
+        double degDiff = Math.abs(finalHour - minDeg);
 
         return Math.min (degDiff,360-degDiff);
     }
